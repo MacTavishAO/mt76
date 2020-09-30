@@ -493,6 +493,8 @@ mt7603_init_txpower(struct mt7603_dev *dev,
 	}
 
 	target_power += max_offset;
+	
+	target_power += 32;
 
 	dev->tx_power_limit = target_power;
 	dev->mphy.txpower_cur = target_power;
